@@ -1,0 +1,76 @@
+{
+  "name": "nappi-pebble",
+  "author": "nappi",
+  "version": "0.1.0",
+  "description": "Pebble Time 2 watchapp for logging feeds, diapers and sleep to the nappi baby tracker",
+  "keywords": [
+    "pebble-app"
+  ],
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "npm run test:js && npm run test:c",
+    "test:js": "node --test \"test/**/*.test.js\"",
+    "test:c": "make -s -C test/c",
+    "mock": "node test/support/serve.js"
+  },
+  "dependencies": {
+    "pebble-clay": "^1.0.4"
+  },
+  "pebble": {
+    "displayName": "nappi-pebble",
+    "uuid": "9d7f77ad-7857-480d-b1fa-73eff0df3926",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "emery"
+    ],
+    "watchapp": {
+      "watchface": false
+    },
+    "capabilities": [
+      "configurable"
+    ],
+    "messageKeys": [
+      "STATUS",
+      "BABY_NAME",
+      "RETRY_AFTER",
+      "CMD",
+      "CMD_ID",
+      "ARG1",
+      "ARG2",
+      "ARG3",
+      "ARG4",
+      "ACK_ID",
+      "ACK_STATUS",
+      "BABY_COUNT",
+      "BABY_INDEX",
+      "BABY_NAMES",
+      "BABY_ACCENT",
+      "OTHER_TIMERS",
+      "BOTTLE_UNITS",
+      "PUMP_UNITS",
+      "EXIT_AFTER_LOG",
+      "DEFAULT_BOTTLE",
+      "LAYOUT",
+      "LAST[7]",
+      "INFO[7]",
+      "TIMER_STATE[3]",
+      "TIMER_ELAPSED[3]",
+      "TIMER_SIDE[3]",
+      "TIMER_AT",
+      "PENDING",
+      "JS_READY"
+    ],
+    "resources": {
+      "media": [
+        { "type": "bitmap", "name": "MENU_ICON", "file": "icons/menu-icon.png", "menuIcon": true },
+        { "type": "bitmap", "name": "ICON_SLEEP", "file": "icons/sleep.png", "memoryFormat": "1BitPalette" },
+        { "type": "bitmap", "name": "ICON_NURSING", "file": "icons/nursing.png", "memoryFormat": "1BitPalette" },
+        { "type": "bitmap", "name": "ICON_BOTTLE", "file": "icons/bottle.png", "memoryFormat": "1BitPalette" },
+        { "type": "bitmap", "name": "ICON_DIAPER", "file": "icons/diaper.png", "memoryFormat": "1BitPalette" },
+        { "type": "bitmap", "name": "ICON_PUMP", "file": "icons/pump.png", "memoryFormat": "1BitPalette" }
+      ]
+    }
+  }
+}

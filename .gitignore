@@ -1,0 +1,10 @@
+build/
+node_modules/
+.lock-waf*
+.wafpickle*
+*.pbw
+.env
+.env.*
+test/c/build/
+.superpowers/
+docs/superpowers/
